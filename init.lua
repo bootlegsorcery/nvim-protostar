@@ -5,6 +5,19 @@ require("catppuccin").setup({
 	treesitter = true,
 })
 
+require('pretty-fold').setup{
+   keep_indentation = false,
+   fill_char = '━',
+   sections = {
+      left = {
+         '━ ', function() return string.rep('*', vim.v.foldlevel) end, ' ━┫', 'content', '┣'
+      },
+      right = {
+         '┫ ', 'number_of_folded_lines', ': ', 'percentage', ' ┣━━',
+      }
+   }
+}
+
 vim.cmd.colorscheme "catppuccin-mocha"
 
 -- Set tabs to be 4 spaces
