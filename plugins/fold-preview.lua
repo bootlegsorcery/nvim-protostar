@@ -1,7 +1,7 @@
 return {
   "anuvyklack/fold-preview.nvim",
   dependencies = { "anuvyklack/keymap-amend.nvim" },
-    after = "nvim-lspconfig",
+  after = "nvim-lspconfig",
   config = function()
       local fp = require('fold-preview')
       local map = require('fold-preview').mapping
