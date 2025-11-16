@@ -1,3 +1,7 @@
+-- Set <leader>
+vim.g.mapleader = " "
+
+-- Load Lazy
 require("protostar.lazy")
 
 require("catppuccin").setup({
@@ -36,3 +40,6 @@ vim.opt.foldlevelstart = 9999
 
 -- Indentation Highlighting
 require("ibl").setup()
+
+-- Set <leader>
+vim.g.mapleader = " "
