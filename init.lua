@@ -20,3 +20,14 @@ vim.opt.clipboard = "unnamedplus"
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.opt.foldlevelstart = 9999
+
+-- Error diagnostics
+vim.keymap.set("n", "<leader>r", function()
+  vim.diagnostic.open_float(nil, {
+    focus = false,
+    scope = "cursor",
+    border = "rounded",
+    close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+  })
+end, { desc = "Show diagnostics (hover)" })
+
