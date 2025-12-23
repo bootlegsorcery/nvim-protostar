@@ -31,3 +31,9 @@ vim.keymap.set("n", "<leader>r", function()
   })
 end, { desc = "Show diagnostics (hover)" })
 
+-- Line Numbers
+vim.keymap.set("n", "<leader>n", function()
+  vim.opt.number = not vim.opt.number:get()
+  vim.opt.relativenumber = not vim.opt.relativenumber:get()
+end, { desc = "Toggle line numbers" })
+
